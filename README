@@ -5,14 +5,14 @@ A Drawing and Animation framework for teaching programmatic logic in Scala
 class HelloCanvas extends Canvas {
     
     // Define a shape
-    val mouseCicrle = new Ellipse( 0,  0, 80, 80, 1f, Color.GREEN, true, Color.RED)
+    val myCircle = new Ellipse( 0,  0, 80, 80, 1f, Color.GREEN, true, Color.RED)
     
     // Add the shape to the canvas
-    canvas += mouseCicrle
+    canvas += myCircle 
     
     // Make the shape move
     override def animate() = {
-        mouseCicrle.moveTo(mouseX, mouseY)
+        myCircle.moveTo(mouseX, mouseY)
     }
     
 }
