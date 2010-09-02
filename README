@@ -1,0 +1,7 @@
+A Drawing and Animation framework for teaching programmatic logic in Scala
+
+To test the files run the following:
+
+scalac Canvas.scala
+scala MyCanvas.scala
+
