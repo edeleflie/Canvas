@@ -2,6 +2,7 @@ A Drawing and Animation framework for teaching programmatic logic in Scala
 
 To test the files run the following:
 
-scalac Canvas.scala
-scala exmaples/MyCanvas.scala
-
+mkdir bin
+scalac -d bin -sourcepath src src/*.scala
+cd bin
+scala -classpath bin examples/MyCanvas.scala
