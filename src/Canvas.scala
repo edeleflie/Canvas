@@ -125,7 +125,7 @@ class Rectangle(x:Int, y:Int, width:Int, height:Int, lineThickness:Float, lineCo
 
 class Ellipse(x:Int, y:Int, width:Int, height:Int, lineThickness:Float, lineColor:Color, fill:Boolean, fillColor:Color) extends Drawable {
     
-    shape  = new java.awt.geom.Ellipse2D.Double(x, y, width, height)
+    shape  = new java.awt.geom.Ellipse2D.Double(x - width, y - height, width * 2, height * 2)
     shapeLineThickness = lineThickness
     shapeLineColor = lineColor
     shapeFill = fill

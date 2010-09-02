@@ -14,7 +14,7 @@ class MyCanvas extends Canvas {
     val ellipse = new Ellipse(200, 200, 80, 80, 10f, Color.GREEN, true, new Color(255,0,0,200))
     val rectangle = new Rectangle(400, 100, 10, 10, 2f, Color.black, true, new Color(210,210,255))
     val polygon = new Polygon( Array(10,300,40,50), Array(30,120,230,200), 0.2f, Color.BLUE, true, new Color(255,255,0,200))
-    val mouseCicrle = new Ellipse(-40, -40, 80, 80, 0.1f, Color.GREEN, true, new Color(255,200,200,50))
+    val mouseCicrle = new Ellipse(0, 0, 40, 40, 0.1f, Color.GREEN, true, new Color(255,200,200,50))
     
     // Put the shapes on the "canvas" (in a specific order)
     canvas += (rectangle, polygon, ellipse, mouseCicrle)
