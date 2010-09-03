@@ -22,6 +22,6 @@ class HelloCanvas extends Canvas {
 To test the files run the following:
 
 mkdir bin
-scalac -d bin -sourcepath src src/*.scala
+scalac -d bin -sourcepath src src/*.scalascalac -d bin -sourcepath src src/*.scala
 cd bin
 scala -classpath bin examples/MyCanvas.scala
