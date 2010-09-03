@@ -6,7 +6,7 @@ Thread.sleep(60000)
 class HelloCanvas extends Canvas {
     
     // Define a shape
-    val mouseCicrle = new Ellipse( 0,  0, 80, 80, 1f, Color.GREEN, true, Color.RED)
+    val mouseCicrle = new Ellipse( 0,  0, 80, 80, 1f, Color.GREEN, Color.RED)
     
     // Add the shape to the canvas
     canvas += mouseCicrle
