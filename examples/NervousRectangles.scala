@@ -1,10 +1,10 @@
 import java.awt.{Color}
 import scala.collection.mutable.ListBuffer
     
-(new NervousRectangles).main(null)
+(new NervousRectangles(700,500)).main(null)
 Thread.sleep(60000)
 
-class NervousRectangles extends Canvas {
+class NervousRectangles(width:Int, height:Int) extends Canvas(width, height) {
   
     // The random number generator
     val rnd = new scala.util.Random

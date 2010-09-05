@@ -1,9 +1,9 @@
 import java.awt.{Color}
     
-(new MyCanvas).main(null)
+(new MyCanvas(800,400)).main(null)
 Thread.sleep(60000)
 
-class MyCanvas extends Canvas {
+class MyCanvas(width:Int, height:Int) extends Canvas(width, height) {
   
     // Some variables to control positions
     var change = 1.01
