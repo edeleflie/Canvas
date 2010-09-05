@@ -3,6 +3,7 @@
 import java.awt._
 import java.awt.Color
 import java.awt.font._
+import java.awt.geom._
 
 class Rectangle(x:Int, y:Int, width:Int, height:Int, lineColor:Color, lineThickness:Float, fillColor:Color) extends Drawable( x, y, lineColor, lineThickness, fillColor)  {
     
@@ -19,6 +20,29 @@ class Ellipse(x:Int, y:Int, width:Int, height:Int, lineColor:Color, lineThicknes
     
     shape  = new java.awt.geom.Ellipse2D.Double(x - width, y - height, width * 2, height * 2)
 }
+
+class Curve(xPoints:Array[Double], yPoints:Array[Double], lineColor:Color, lineThickness:Float, fillColor:Color) extends Drawable( lineColor, lineThickness, fillColor ) {
+    
+    def this(xPoints:Array[Double], yPoints:Array[Double], lineColor:Color, lineThickness:Float ) = this(xPoints, yPoints, lineColor, lineThickness, null)  
+    
+    val path:GeneralPath = new GeneralPath();
+    path.moveTo(xPoints(0),yPoints(0));
+    // path.lineTo(0.0f,125.0f);
+    
+    for  ( i <- 1 to (xPoints.length - 1) by 2)  {
+        path.quadTo( xPoints(i) , yPoints(i),  xPoints(i+1) , yPoints(i+1) )
+    }
+    
+    shape = path.asInstanceOf[Shape]
+    
+    //path.curveTo(260.0f,100.0f,130.0f,50.0f,225.0f,0.0f);
+    // path.closePath();
+}
+
+class Line() extends Drawable() {
+    // java.awt.geom.QuadCurve2D.Double
+}
+
 
 class Text(x:Int, y:Int, text:String, size:Double) extends Drawable( x, y ) {
         

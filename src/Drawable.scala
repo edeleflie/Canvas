@@ -12,7 +12,7 @@ import java.awt.geom._
 class Drawable(var x:Int, var y:Int, var lineColor:Color, var lineThickness:Float, var fillColor:Color) {
 
     // Auxiliary constructors
-    def this(lineColor:Color,  lineThickness:Float,  fillColor:Color) = this( 0, 0, Color.black, 0.2f, fillColor) 
+    def this(lineColor:Color,  lineThickness:Float,  fillColor:Color) = this(0, 0, lineColor,lineThickness, fillColor) 
     def this( x:Int,  y:Int) = this( x, y, Color.black, 0.2f, null) 
     def this() = this( 0, 0, Color.black, 0.2f, null)  
     
@@ -112,4 +112,5 @@ class Drawable(var x:Int, var y:Int, var lineColor:Color, var lineThickness:Floa
     def hasCollidedWith(otherShape: Drawable): Boolean = {
         return shape.getBounds().intersects(otherShape.shape.getBounds())
     }
+
 }
