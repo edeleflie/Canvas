@@ -109,7 +109,7 @@ class Drawable(var x:Int, var y:Int, var lineColor:Color, var lineThickness:Floa
         shearY = y;
     }
     
-    def hasCollidedWith(otherShape: Drawable): Boolean = {
+    def collidesWith(otherShape: Drawable): Boolean = {
         return shape.getBounds().intersects(otherShape.shape.getBounds())
     }
 
