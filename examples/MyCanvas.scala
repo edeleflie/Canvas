@@ -22,13 +22,12 @@ class MyCanvas(width:Int, height:Int) extends Canvas(width, height) {
     
     // Make the shapes move
     override def animate() = {
-        
         ellipse.moveBy(xIncrement, yIncrement)
         rectangle.scaleBy( change )
         mouseCircle.moveTo(mouseX, mouseY)
         polygon.rotateBy(1)
         
-        if ( mouseCircle.hasCollidedWith(ellipse) ) ellipse.fillColor =  new Color(rnd.nextInt(255),rnd.nextInt(255),rnd.nextInt(255),200)
+        if ( mouseCircle.collidesWith(ellipse) ) ellipse.fillColor =  new Color(rnd.nextInt(255),rnd.nextInt(255),rnd.nextInt(255),200)
     }
     
     // Respond to key presses
